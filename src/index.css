@@ -1,0 +1,113 @@
+/* ── Sharp Grotesk (grade 20) ────────────────────────────────────────────────
+   Loaded from /public/fonts/Sharp_Grotesk/ — served at /fonts/* by Vite.
+─────────────────────────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'Sharp Grotesk';
+  src: url('/fonts/Sharp_Grotesk/SharpGrotesk-Light20.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sharp Grotesk';
+  src: url('/fonts/Sharp_Grotesk/SharpGrotesk-Book20.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sharp Grotesk';
+  src: url('/fonts/Sharp_Grotesk/SharpGrotesk-Medium20.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sharp Grotesk';
+  src: url('/fonts/Sharp_Grotesk/SharpGrotesk-SemiBold20.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sharp Grotesk';
+  src: url('/fonts/Sharp_Grotesk/SharpGrotesk-Bold20.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-surface text-white antialiased;
+    font-family: 'Sharp Grotesk', system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-3 rounded-full;
+  }
+}
+
+@layer components {
+  .ds-section {
+    @apply mb-14;
+  }
+
+  /* Section title — H3 scale, muted, with bottom rule */
+  .ds-section-title {
+    @apply text-h3 font-medium text-gray-1 mb-8 pb-3 border-b border-gray-4;
+  }
+
+  /* Subsection label — body-muted, uppercase, spaced */
+  .ds-subsection-label {
+    @apply text-body-muted font-medium text-gray-2 uppercase tracking-widest mb-4;
+  }
+
+  /* Spec tag — mono metadata below a component */
+  .ds-spec {
+    @apply text-body-muted font-mono text-gray-3 mt-2;
+  }
+
+  .ds-row {
+    @apply flex flex-wrap gap-4 items-center;
+  }
+
+  /* Variant grid — columns align primary / secondary / disabled */
+  .ds-variant-grid {
+    @apply grid gap-x-10 gap-y-6;
+    grid-template-columns: 140px 1fr 1fr 1fr;
+  }
+
+  .ds-variant-label {
+    @apply text-body-muted text-gray-2 font-medium self-center;
+  }
+
+  .ds-col-header {
+    @apply text-body-muted text-gray-3 uppercase tracking-widest font-medium;
+  }
+}
