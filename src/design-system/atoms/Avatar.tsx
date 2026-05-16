@@ -3,11 +3,11 @@ export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg'
 export type AvatarShape = 'square' | 'rounded' | 'circle'
 
 const AVATAR_SRC: Record<AvatarVariant, string> = {
-  trooper: '/avatars/trooper.png',
-  cop:     '/avatars/cop.png',
-  girl:    '/avatars/girl.png',
-  bot:     '/avatars/bot.png',
-  default: '/avatars/default.png',
+  trooper: `${import.meta.env.BASE_URL}avatars/trooper.png`,
+  cop:     `${import.meta.env.BASE_URL}avatars/cop.png`,
+  girl:    `${import.meta.env.BASE_URL}avatars/girl.png`,
+  bot:     `${import.meta.env.BASE_URL}avatars/bot.png`,
+  default: `${import.meta.env.BASE_URL}avatars/default.png`,
 }
 
 const SIZE_CLASS: Record<AvatarSize, string> = {

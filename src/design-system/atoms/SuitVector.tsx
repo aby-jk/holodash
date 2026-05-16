@@ -16,11 +16,12 @@ export function SuitVector({
   height = 200,
   className = '',
 }: SuitVectorProps) {
+  const base = import.meta.env.BASE_URL
   const src = zone
-    ? `/suit/zone-${zone}-${view === 'front' ? 'f' : 'b'}.svg`
+    ? `${base}suit/zone-${zone}-${view === 'front' ? 'f' : 'b'}.svg`
     : selected
-      ? `/suit/${view}-selected.svg`
-      : `/suit/${view}.svg`
+      ? `${base}suit/${view}-selected.svg`
+      : `${base}suit/${view}.svg`
 
   return (
     <img

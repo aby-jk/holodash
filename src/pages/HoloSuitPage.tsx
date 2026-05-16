@@ -37,12 +37,14 @@ const INITIAL_WARNINGS: Alert[] = [
   { id: 'w2', title: 'Sync Lag Detected', code: 'W-102' },
 ]
 
+const BASE = import.meta.env.BASE_URL
+
 const AVATARS = [
-  { id: 'default', src: '/avatars/default.png', label: 'Default' },
-  { id: 'trooper', src: '/avatars/trooper.png', label: 'Trooper' },
-  { id: 'girl',    src: '/avatars/girl.png',    label: 'Girl'    },
-  { id: 'cop',     src: '/avatars/cop.png',     label: 'Cop'     },
-  { id: 'bot',     src: '/avatars/bot.png',     label: 'Robot'   },
+  { id: 'default', src: `${BASE}avatars/default.png`, label: 'Default' },
+  { id: 'trooper', src: `${BASE}avatars/trooper.png`, label: 'Trooper' },
+  { id: 'girl',    src: `${BASE}avatars/girl.png`,    label: 'Girl'    },
+  { id: 'cop',     src: `${BASE}avatars/cop.png`,     label: 'Cop'     },
+  { id: 'bot',     src: `${BASE}avatars/bot.png`,     label: 'Robot'   },
 ]
 
 export default function HoloSuitPage({ onHome, connectedDeviceIds = [] }: HoloSuitPageProps) {
@@ -199,7 +201,7 @@ export default function HoloSuitPage({ onHome, connectedDeviceIds = [] }: HoloSu
           {activeTab === 'mocap' ? (
             <div className="flex-1 relative flex items-center justify-center overflow-hidden">
               <img
-                src="/viewport-bg.png"
+                src={`${import.meta.env.BASE_URL}viewport-bg.png`}
                 alt=""
                 className={`absolute pointer-events-none select-none transition-all duration-300 ${
                   expanded

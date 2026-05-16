@@ -33,7 +33,7 @@ interface IconProps {
 export function Icon({ name, size = 24, className = '' }: IconProps) {
   return (
     <img
-      src={`/icons/${name}.svg`}
+      src={`${import.meta.env.BASE_URL}icons/${name}.svg`}
       alt={name}
       width={size}
       height={size}

@@ -18,7 +18,7 @@ const slugMap: Record<DeviceProperty, string> = {
 export function DeviceVector({ property, state, width = 120, height = 150 }: DeviceVectorProps) {
   const slug = slugMap[property]
   const suffix = state ? 'active' : 'inactive'
-  const src = `/${slug}_${suffix}.svg`
+  const src = `${import.meta.env.BASE_URL}${slug}_${suffix}.svg`
 
   return (
     <img
