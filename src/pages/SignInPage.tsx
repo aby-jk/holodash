@@ -17,7 +17,7 @@ export default function SignInPage({ onSignIn, onSignUp }: SignInPageProps) {
       {/* ── Cover image panel ── */}
       <div className="absolute left-10 top-10 bottom-10 w-[47.92%] rounded-xl overflow-hidden">
         <img
-          src="/signin-cover.webp"
+          src={`${import.meta.env.BASE_URL}signin-cover.webp`}
           alt="HoloSuit 3.0"
           className="w-full h-full object-cover object-[45%_47%]"
         />

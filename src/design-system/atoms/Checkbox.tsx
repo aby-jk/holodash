@@ -76,7 +76,7 @@ export function RecaptchaWidget({
         I am not a robot
       </span>
       <img
-        src="/recaptcha_logo.png"
+        src={`${import.meta.env.BASE_URL}recaptcha_logo.png`}
         alt="reCAPTCHA"
         width={31}
         height={29}
